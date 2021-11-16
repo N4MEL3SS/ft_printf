@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_print_int.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: celadia <celadia@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/11/16 17:59:23 by celadia           #+#    #+#             */
+/*   Updated: 2021/11/16 17:59:23 by celadia          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../includes/ft_printf.h"
 
 char	*ft_convert_int(long n, int *num_len)
@@ -53,25 +65,25 @@ void	ft_logic_print_int(t_form *f_flag, int n_len, int *size)
 void	ft_put_int(char *str, t_form *f_flag, int i, char sign)
 {
 	if (f_flag->zero == 1)
-    {
-        ft_putnchar(&sign, f_flag->plus);
-        ft_memset('0', f_flag->width);
-        ft_putnchar(str, i);
-    }
-    else if (f_flag->minus == 0)
-    {
-        ft_memset(' ', f_flag->width);
-        ft_putnchar(&sign, f_flag->plus);
-        ft_memset('0', f_flag->precision);
-        ft_putnchar(str, i);
-    }
-    else
-    {
-        ft_putnchar(&sign, f_flag->plus);
-        ft_memset('0', f_flag->precision);
-        ft_putnchar(str, i);
-        ft_memset(' ', f_flag->width);
-    }
+	{
+		ft_putnchar(&sign, f_flag->plus);
+		ft_memset('0', f_flag->width);
+		ft_putnchar(str, i);
+	}
+	else if (f_flag->minus == 0)
+	{
+		ft_memset(' ', f_flag->width);
+		ft_putnchar(&sign, f_flag->plus);
+		ft_memset('0', f_flag->precision);
+		ft_putnchar(str, i);
+	}
+	else
+	{
+		ft_putnchar(&sign, f_flag->plus);
+		ft_memset('0', f_flag->precision);
+		ft_putnchar(str, i);
+		ft_memset(' ', f_flag->width);
+	}
 }
 
 void	ft_print_int(int n, t_form *f_flag, int *size)
