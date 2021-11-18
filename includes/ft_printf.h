@@ -6,7 +6,7 @@
 /*   By: celadia <celadia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 18:01:12 by celadia           #+#    #+#             */
-/*   Updated: 2021/11/16 18:01:12 by celadia          ###   ########.fr       */
+/*   Updated: 2021/11/18 13:41:02 by celadia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,7 @@ void		ft_print_uint(unsigned int n, t_form *f_flag, int *size);
 void		ft_print_hex(unsigned int n, int x, t_form *f_flag, int *size);
 void		ft_print_ptr(size_t n, t_form *f_flag, int *size);
 
+/*  */
 int			ft_printf(const char *f_str, ...);
 const char	*ft_pars(const char *f_str, va_list ap, t_form *f_flag);
 
