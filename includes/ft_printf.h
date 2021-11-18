@@ -15,7 +15,6 @@
 
 # include <stdarg.h>
 # include <stdlib.h>
-# include <stdio.h> //TODO: Удалить
 # include <unistd.h>
 
 # define MEM_SIZE 8
